@@ -1,0 +1,30 @@
+﻿@using Core.DTOs
+@model SignUpViewModel
+
+
+<h2>SignUp Page</h2>
+
+<form asp-area="Main" asp-controller="MainHome" asp-action="SignUp" method="post">
+    <div class="input-group">
+        <input asp-for="Username" type ="text" class="form-control" placeholder="Username"/>
+    </div>
+    <div class="input-group">
+        <input asp-for="Email" type="text" class="form-control" placeholder="Email" />
+    </div>
+    <div class="input-group">
+        <input asp-for="Password" type="text" class="form-control" placeholder="Pasword" />
+    </div>
+    <div class="input-group">
+        <input asp-for="RePassword" type="text" class="form-control" placeholder="RePassword" />
+    </div>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <button type="submit" class="btn btn-success">
+        SignUp
+    </button>
+    <button type="button">
+        <a asp-area="Main" asp-controller="MainHome" asp-action="SignIn">
+            I Have Account
+        </a>
+    </button>
+</form>

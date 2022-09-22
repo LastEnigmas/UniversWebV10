@@ -9,7 +9,7 @@ namespace Core.DTOs
 {
     public class SignInViewModel
     {
-        [Required(ErrorMessage = "Required")]
+        [Required(ErrorMessage = "Required {0}")]
         [Display(Name = "UsernaemOrEmail")]
         public string UsernameOrEmail { get; set; }
 

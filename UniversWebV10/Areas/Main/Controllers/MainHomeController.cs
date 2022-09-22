@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using static Core.Convertor.ViewToString;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UniversWebV10.Areas.Main.Controllers
 {
@@ -30,6 +31,9 @@ namespace UniversWebV10.Areas.Main.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        public IActionResult Hello() => View();
 
         #region SignUp
         [Route("SignUp")]
