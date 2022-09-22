@@ -76,7 +76,7 @@ namespace UniversWebV10.Areas.Main.Controllers
         }
 
         #endregion
-
+         
         #region Register
 
         public IActionResult Register(string id )
