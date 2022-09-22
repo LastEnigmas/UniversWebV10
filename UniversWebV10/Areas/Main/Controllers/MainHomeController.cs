@@ -122,6 +122,7 @@ namespace UniversWebV10.Areas.Main.Controllers
                     {
                         IsPersistent = signIn.RememberMe
                     };
+
                     HttpContext.SignInAsync(principal, properties);
 
                     ViewBag.IsSignIn = true;

@@ -1,0 +1,19 @@
+﻿<h2>Register Page</h2>
+
+@if (ViewBag.IsRegister == true)
+{
+    <h2>Good You Can LogIn Now</h2>
+    <button type = "button" class="btn-success">
+        <a asp-area="Main" asp-controller="HomeMain" asp-action="Register">
+            Login
+        </a>    
+    </button>
+}else
+{
+    <h2>Somthing Wrong</h2>
+    <button type="button" class="btn-danger">
+        <a asp-area="Main" asp-controller="MainHome" asp-action="Index">
+            Main Page
+        </a>
+    </button>
+}

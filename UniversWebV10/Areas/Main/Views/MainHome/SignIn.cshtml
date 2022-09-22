@@ -1,7 +1,10 @@
 ﻿@using Core.DTOs
 @model SignInViewModel
 <h1>SignIn Page</h1>
-
+@if(ViewBag.IsSignIn == true )
+{
+    <h2>You In !</h2>
+}
 <form asp-area="Main" asp-controller="MainHome" asp-action="SignIn"  method="post">
     <div class="input-group">
         <input asp-for="UsernameOrEmail" class="form-control" placeholder="User Or Email" />

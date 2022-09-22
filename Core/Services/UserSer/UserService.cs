@@ -68,9 +68,9 @@ namespace Core.Services.UserSer
 
         public User SignInUser(SignInViewModel signIn)
         {
+            string MyHashPassword = PasswordHashC.EncodePasswordMd5(signIn.Password);
             User user = _db.Users.SingleOrDefault( u => u.Email == signIn.UsernameOrEmail || u.Username == signIn.UsernameOrEmail);
-            user.Password = PasswordHashC.EncodePasswordMd5(signIn.Password);
-            if((user == null) || (user.Password != signIn.Password))
+            if((user == null) || (user.Password != MyHashPassword))
             {
                 return null;
             }
